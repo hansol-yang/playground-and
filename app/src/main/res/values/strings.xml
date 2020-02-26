@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PlaygroundAnd</string>
+    <string name="quiz_mode">퀴즈모드</string>
+    <string name="store_ui_state_sample">store ui state sample</string>
+    <string name="attrs_with_databinding_sample">attrs with databinding sample</string>
+    <string name="dynamic_lines_sample">dynamic lines sample</string>
+    <string name="fill">fill</string>
+    <string name="del">del</string>
+</resources>

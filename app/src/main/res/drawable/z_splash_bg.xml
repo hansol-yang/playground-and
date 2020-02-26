@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap android:gravity="clip_horizontal|clip_vertical|center_vertical"
+    android:src="@drawable/z_splash_frame_first"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

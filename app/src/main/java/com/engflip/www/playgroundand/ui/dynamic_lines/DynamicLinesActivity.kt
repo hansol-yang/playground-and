@@ -45,26 +45,58 @@ class DynamicLinesActivity : BaseActivity() {
             buttonFill
                 .clicks()
                 .subscribeBy {
-                    var targetLayout: LinearLayout = layoutLinesOfLetters[lineCursor]
-
-                    if (letterCursor > targetLayout.childCount - 1) {
-                        letterCursor = 0
-                        lineCursor++
-                        targetLayout = layoutLinesOfLetters[lineCursor]
-                    }
-
-                    val textHolder = targetLayout.getChildAt(letterCursor) as TextView
-                    textHolder.text = "z"
-
-                    if(letterCursor >= targetLayout.childCount - 1) return@subscribeBy
-                    letterCursor++
+                    fillText()
                 }
                 .addTo(disposables)
 
             buttonDel
                 .clicks()
-                .subscribeBy { }
+                .subscribeBy {
+                    clearText()
+                }
                 .addTo(disposables)
+        }
+    }
+
+    private fun fillText() {
+        val layout = layoutLinesOfLetters[lineCursor]
+        val textView: TextView = layout.getChildAt(letterCursor) as TextView
+
+        if(textView.text.isNotEmpty()) {
+            if(letterCursor == layout.childCount - 1) {
+                if(lineCursor < layoutLinesOfLetters.size - 1) {
+                    letterCursor = 0
+                    lineCursor ++
+                    fillText()
+                }
+            } else {
+                letterCursor ++
+                val nextTextView = layout.getChildAt(letterCursor) as TextView
+                nextTextView.text = "z"
+            }
+        } else {
+            textView.text = "z"
+        }
+    }
+
+    private fun clearText() {
+        val layout = layoutLinesOfLetters[lineCursor]
+        val textView: TextView = layout.getChildAt(letterCursor) as TextView
+
+        if(textView.text.isEmpty()) {
+            if(letterCursor != 0) {
+                letterCursor --
+                val prevTextView = layout.getChildAt(letterCursor) as TextView
+                prevTextView.text = null
+            } else {
+                if(lineCursor != 0) {
+                    lineCursor --
+                    letterCursor = layoutLinesOfLetters[lineCursor].childCount - 1
+                    clearText()
+                }
+            }
+        } else {
+            textView.text = null
         }
     }
 
@@ -94,11 +126,7 @@ class DynamicLinesActivity : BaseActivity() {
                 attachLineOfLetters(targetLayout)
 
                 word.forEach {
-                    val textHolder =
-                        targetLayout.inflate(R.layout.dynamic_text_holder, false).apply {
-                            this as TextView
-                            text = it.toString()
-                        }
+                    val textHolder = targetLayout.inflate(R.layout.dynamic_text_holder, false)
                     targetLayout.addView(textHolder)
 
                     textHolder.run {

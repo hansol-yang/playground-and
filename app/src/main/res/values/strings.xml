@@ -6,4 +6,9 @@
     <string name="dynamic_lines_sample">dynamic lines sample</string>
     <string name="fill">fill</string>
     <string name="del">del</string>
+    <string name="quiz_mode_flow_sample">quiz mode flow sample</string>
+    <string name="select_word">Select word</string>
+    <string name="select_meaning">Select meaning</string>
+    <string name="spelling">Spelling</string>
+    <string name="play">play</string>
 </resources>

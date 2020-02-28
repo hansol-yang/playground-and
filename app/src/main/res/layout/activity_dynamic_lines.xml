@@ -88,7 +88,12 @@
                 android:text="@string/fill"
                 android:background="@drawable/z_dynamic_fill_bg"
                 tools:ignore="ButtonStyle"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/white"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginEnd="15dp"/>
 
             <Button
                 android:id="@+id/button_del"
@@ -97,7 +102,11 @@
                 android:text="@string/del"
                 tools:ignore="ButtonStyle"
                 android:background="@drawable/z_dynamic_del_bg"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/white"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

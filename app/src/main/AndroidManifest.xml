@@ -25,6 +25,8 @@
         <activity
             android:name=".ui.dynamic_lines.DynamicLinesActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".ui.quiz_mode.QuizPlayerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.quiz_mode.QuizResultActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

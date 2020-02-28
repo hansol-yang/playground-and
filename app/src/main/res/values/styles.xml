@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="android:textViewStyle">@style/PGTextView</item>
+        <item name="buttonStyle">@style/MButtonStyle</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -18,6 +19,22 @@
     <style name="PGTextView" parent="Widget.AppCompat.TextView">
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="MButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="MainButtonStyle" parent="MButtonStyle">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:background">@drawable/z_main_button_bg</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginBottom">15dp</item>
     </style>
 
 </resources>

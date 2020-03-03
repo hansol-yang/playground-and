@@ -7,7 +7,7 @@ import com.engflip.www.playgroundand.R
 import com.engflip.www.playgroundand.ui.attrs_with_databinding.getAttrsWithDataBindingActivityIntent
 import com.engflip.www.playgroundand.ui.base.BaseActivity
 import com.engflip.www.playgroundand.ui.dynamic_lines.getDynamicLinesActivityIntent
-import com.engflip.www.playgroundand.ui.quiz_mode.getQuizPlayerActivityIntent
+import com.engflip.www.playgroundand.ui.quiz.getQuizModeActivityIntent
 import com.engflip.www.playgroundand.ui.store_state.getStoreStateActivityIntent
 import com.jakewharton.rxbinding3.view.clicks
 import io.reactivex.rxkotlin.addTo
@@ -49,7 +49,7 @@ class MainActivity : BaseActivity() {
         button_quiz_mode_flow
             .clicks()
             .subscribeBy {
-                startActivity(getQuizPlayerActivityIntent())
+                startActivity(getQuizModeActivityIntent())
             }
             .addTo(disposables)
     }

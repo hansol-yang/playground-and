@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="extra_quiz_mode">QUIZ_MODE</string>
+    <string name="idx">IDX</string>
+</resources>

@@ -27,6 +27,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".ui.quiz_mode.QuizPlayerActivity" android:screenOrientation="portrait"/>
         <activity android:name=".ui.quiz_mode.QuizResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.quiz.QuizModeActivity" />
+        <activity android:name=".ui.quiz.QuizPlayActivity" />
     </application>
 
 </manifest>
